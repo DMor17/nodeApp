@@ -28,7 +28,7 @@ http.createServer(function(request, response) {
             response.write('Connection established to' + url +"\n");
 
             // do some work here with the database.
-
+ 
             //Done Close connection
             db.close();
         }
