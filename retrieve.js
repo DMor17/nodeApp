@@ -30,7 +30,6 @@ http.createServer(function(request, response) {
             var collection = db.collection('users');
             //We have a cursor now with our find criteria
             var results = collection.find({name: 'modulus user'});
-
             //Lets iterate on the result
             results.each(function (err, result) {
                 if (err) {
@@ -46,7 +45,6 @@ http.createServer(function(request, response) {
             });
 
         }
-        response.end('Finished, Connection closed \n');
     });
 
 }).listen(port);
