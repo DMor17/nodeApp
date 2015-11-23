@@ -46,18 +46,22 @@ http.createServer(function(request, response) {
                     response.end('Completed');
                     db.close();
                 }
+
+
+                db.close();
+                response.end('Finished, Connection closed \n');
+
             });
 
 
             //Done Close connection
+
 
         }
 
 
     });
 
-    db.close();
-    response.end('Finished, Connection closed \n');
 
 
 }).listen(port);
